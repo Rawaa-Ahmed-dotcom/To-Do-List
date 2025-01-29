@@ -1,0 +1,95 @@
+
+* {
+    font-family: "Dancing Script";
+}
+body {
+    background-image : url(../images/dark-green-wall-shadow-background-with-flower_53876-119873.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    padding-inline: 26em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container h1 {
+    color: #921A40;
+    font-size: 2em;
+    font-weight: 700;
+    max-width: 100%;
+    text-align: center;
+}
+
+form {
+    display:flex;
+    
+    width: 100%; 
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin: auto;
+    margin-block: 3em;
+}
+input {
+    width: 100%;
+    border: none; 
+    box-shadow: 0 0 3px #D9ABAB; 
+    padding: 0.7em;
+    background-color:  #D9ABAB;
+    border-radius: 6px;
+    color: #921A40;
+    flex: 4;
+    font-size: 1.3em;
+}
+input::placeholder {
+    color: #921A40;
+    font-size: 1.3em;
+}
+input[type = "submit"] {
+    background-color:  #D9ABAB;
+    font-size: 1.4em;
+    font-weight: 700;
+    padding: 0.6em;
+    color: #921A40;
+    flex: 1;
+}
+input:focus {
+    outline:  none;
+}
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    width: 100%;
+    margin-block: 3em;
+}
+.results div {
+    border-radius: 6px;
+    color: rgb(202, 17, 48);
+    font-weight: 700;
+    width: 90%;
+}
+@media(max-width: 1024px) {
+    .container {
+        padding-inline: 1.22em;
+    }
+    html {
+        font-size: 6em;
+    }
+    /* input,select {
+        width: 100%;
+    } */
+    
+}
+@media(max-width: 767px) {
+    .container {
+        padding-inline: 1.22em;
+    }
+    html {
+        font-size: 4em;
+    }
+}
