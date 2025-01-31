@@ -1,95 +1,134 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
-    font-family: "Dancing Script";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    list-style: none;
 }
 body {
-    background-image : url(../images/dark-green-wall-shadow-background-with-flower_53876-119873.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
 }
 .container {
-    padding-inline: 26em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image : linear-gradient(to right,#213555,#3e5879ef);
+    padding: 1em;
 }
-.container h1 {
-    color: #921A40;
-    font-size: 2em;
-    font-weight: 700;
+.container .card {
+    background-color:  #F5EFE7;
+    width: 33.75em;
     max-width: 100%;
-    text-align: center;
-}
+    margin: 6.25em auto 1.25em;
+    border-radius: 10px;
+    padding: 2.5em 1.875em 4.375em;
 
-form {
-    display:flex;
-    
-    width: 100%; 
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    margin: auto;
-    margin-block: 3em;
 }
-input {
+.card h2 {
+color: #213555;
+display: flex;
+align-items: flex-end;
+margin-bottom: 1.8em;
+
+}
+.card h2 img {
+    width: 1.8em;
+    margin-right: 0.5em;
+
+}
+.card form {
     width: 100%;
-    border: none; 
-    box-shadow: 0 0 3px #D9ABAB; 
-    padding: 0.7em;
-    background-color:  #D9ABAB;
-    border-radius: 6px;
-    color: #921A40;
-    flex: 4;
-    font-size: 1.3em;
+    display: flex;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    
 }
-input::placeholder {
-    color: #921A40;
-    font-size: 1.3em;
+.card form input {
+    border: none;
+    outline: none;
 }
-input[type = "submit"] {
-    background-color:  #D9ABAB;
-    font-size: 1.4em;
-    font-weight: 700;
-    padding: 0.6em;
-    color: #921A40;
+.card form #text {
+    flex: 2;
+    padding: 1em 1.5em;
+    color: #213555;
+
+}
+.card form #text::placeholder {
+    color: #21355596;
+
+
+}
+.card form input[type = "submit"] {
     flex: 1;
-}
-input:focus {
-    outline:  none;
-}
-.results {
+    border-radius: 25px;
+    background-color: #31486d;
+    color: white;
+    font-size: 1.25em;
+    cursor: pointer;
+} 
+.card ul {
+    margin-top: 3em;
+    padding-inline: 2em;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2em;
-    width: 100%;
-    margin-block: 3em;
+    gap: 1em;
 }
-.results div {
-    border-radius: 6px;
-    color: rgb(202, 17, 48);
-    font-weight: 700;
-    width: 90%;
+.card ul li {
+    background-color: white;
+    padding: 1em 2em;
+    border-radius: 20px;
+    color: #213555;
+    font-size: 1.1em;
+    position: relative;
+    cursor: pointer;
 }
-@media(max-width: 1024px) {
-    .container {
-        padding-inline: 1.22em;
-    }
-    html {
-        font-size: 6em;
-    }
-    /* input,select {
-        width: 100%;
-    } */
+.card ul li i {
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translatey(-50%);
+    font-size: 1.1em;
+
+}
+.card ul li::before {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #213555;
+    border-radius: 50%;
+    left: 0.5em;
+    top: 50%;
+    transform: translatey(-50%);
+}
+.card ul li.checked {
+    text-decoration: line-through;
+    color: #21355596;
     
 }
-@media(max-width: 767px) {
-    .container {
-        padding-inline: 1.22em;
-    }
-    html {
-        font-size: 4em;
-    }
+.card ul li.checked::before {
+    background-color: #213555;
+}
+.card ul li.checked::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f00c";
+    position: absolute;
+    font-size: 0.8em;
+    color: white;
+    top: 53%;
+    transform: translatey(-50%);
+    left: 0.9em;
+}
+.card ul li i {
+    transition: 0.3s;
+    color: #213555 !important ;
+}
+.card ul li i:hover {
+    cursor: pointer;
+    border-radius: 50%;
+}
+.card ul li.checked {
+    text-decoration: line-through;
 }
