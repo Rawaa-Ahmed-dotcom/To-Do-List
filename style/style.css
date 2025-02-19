@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    list-style: none;
+}
+body {
+    position: relative;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image : linear-gradient(to right,#213555,#3e5879ef);
+    padding: 1em;
+}
+.container .card {
+    background-color:  #F5EFE7;
+    width: 33.75em;
+    max-width: 100%;
+    margin: 6.25em auto 1.25em;
+    border-radius: 10px;
+    padding: 2.5em 1.875em 4.375em;
+
+}
+.card h2 {
+color: #213555;
+display: flex;
+align-items: flex-end;
+margin-bottom: 1.8em;
+
+}
+.card h2 img {
+    width: 1.8em;
+    margin-right: 0.5em;
+
+}
+.card form {
+    width: 100%;
+    display: flex;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    
+}
+.card form input {
+    border: none;
+    outline: none;
+}
+.card form #text {
+    flex: 2;
+    padding: 1em 1.5em;
+    color: #213555;
+
+}
+.card form #text::placeholder {
+    color: #21355596;
+
+
+}
+.card form input[type = "submit"] {
+    flex: 1;
+    border-radius: 25px;
+    background-color: #31486d;
+    color: white;
+    font-size: 1.25em;
+    cursor: pointer;
+} 
+.card ul {
+    margin-top: 3em;
+    padding-inline: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.card ul li {
+    background-color: white;
+    padding: 1em 2em;
+    border-radius: 20px;
+    color: #213555;
+    font-size: 1.1em;
+    position: relative;
+    cursor: pointer;
+}
+.card ul li.done {
+    opacity: 0.5;
+}
+.card ul li i {
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translatey(-50%);
+    font-size: 1.1em;
+
+}
+.card ul li::before {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #213555;
+    border-radius: 50%;
+    left: 0.5em;
+    top: 50%;
+    transform: translatey(-50%);
+}
+.card ul li.checked {
+    text-decoration: line-through;
+    color: #21355596;
+    
+}
+.card ul li.checked::before {
+    background-color: #213555;
+}
+.card ul li.checked::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f00c";
+    position: absolute;
+    font-size: 0.8em;
+    color: white;
+    top: 53%;
+    transform: translatey(-50%);
+    left: 0.9em;
+}
+.card ul li i {
+    transition: 0.3s;
+    color: #213555 !important ;
+}
+.card ul li i:hover {
+    cursor: pointer;
+    border-radius: 50%;
+}
+.card ul li.checked {
+    text-decoration: line-through;
+}
+
+
+.delete {
+    background-color: #213555;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translatey(-50%);
+}
