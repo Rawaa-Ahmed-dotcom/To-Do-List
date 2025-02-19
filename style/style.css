@@ -83,9 +83,6 @@ margin-bottom: 1.8em;
     position: relative;
     cursor: pointer;
 }
-.card ul li.done {
-    opacity: 0.5;
-}
 .card ul li i {
     position: absolute;
     right: 1em;
@@ -105,15 +102,15 @@ margin-bottom: 1.8em;
     top: 50%;
     transform: translatey(-50%);
 }
-.card ul li.checked {
+.card ul li.done {
     text-decoration: line-through;
     color: #21355596;
     
 }
-.card ul li.checked::before {
+.card ul li.done::before {
     background-color: #213555;
 }
-.card ul li.checked::after {
+.card ul li.done::after {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: "\f00c";
